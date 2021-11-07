@@ -5,7 +5,6 @@ import 'package:great_places/models/place_location.dart';
 import 'package:great_places/providers/places_provider.dart';
 import 'package:great_places/widgets/image_input.dart';
 import 'package:great_places/widgets/location_input.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
 class AddPlaceScreen extends StatefulWidget {

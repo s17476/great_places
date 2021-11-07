@@ -13,6 +13,10 @@ class PlacesProvider with ChangeNotifier {
     return [..._items];
   }
 
+  Place findById(String id) {
+    return _items.firstWhere((element) => element.id == id);
+  }
+
   Future<void> addPlace(
     String title,
     File image,
@@ -22,7 +26,7 @@ class PlacesProvider with ChangeNotifier {
         pickedLocation.latitude, pickedLocation.longitude);
     final updatedLocation = PlaceLocation(
       latitude: pickedLocation.latitude,
-      longitude: pickedLocation.latitude,
+      longitude: pickedLocation.longitude,
       address: address,
     );
     final newPlace = Place(
